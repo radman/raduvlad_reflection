@@ -3,10 +3,12 @@ require "erb"
 
 load "config/recipes/base"
 load "config/recipes/nginx"
+load "config/recipes/mysql"
+load "config/recipes/wordpress"
 
-server "ec2-23-21-20-0.compute-1.amazonaws.com", :app, :web
+server "ec2-23-21-35-191.compute-1.amazonaws.com", :app, :web, :db
 set :application, "bootstrap-wordpress"
-set :nginx_server_name, ".newcomer101.com"
+set :nginx_server_name, "_"
 
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
