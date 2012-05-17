@@ -7,8 +7,8 @@ load "config/recipes/mysql"
 load "config/recipes/wordpress"
 
 server "23.21.115.207", :app, :web, :db
-set :application, "bootstrap-wordpress"
-set :nginx_server_name, "bootstrap-wordpress.raduvlad.com"
+set :application, "raduvlad_reflection"
+set :nginx_server_name, "reflection.raduvlad.com"
 
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
